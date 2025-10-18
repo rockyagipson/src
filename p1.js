@@ -5,25 +5,25 @@
 //   one root when its discriminant is zero
 //   zero roots when its discriminant is negative 
 function p1(a, b, c) {
-    var a = +prompt('Enter value for a:');
-    var b = +prompt('Enter value for b:');
-    var c = +prompt('Enter value for c:');
+    const discriminant = (b*b) - (4*a*c);
     
-    discriminant = (b*b) - (4*a*c);
-
     if (discriminant > 0) {
+        console.log('Two Roots');
         return 2;
-        console.log("The number of roots is: " + 2);
     } else if (discriminant === 0) {
+        console.log('One Root');
         return 1;
-        console.log("The number of roots is: " + 1);
     } else {
+        console.log('No Roots');
         return 0;
-        console.log("The number of roots is: " + 0);
-   }
+    }   
+
     // TODO: Calculate the discriminant
     // TODO: Return the number of roots
 }
+
+
+
 
 
 module.exports = p1;
